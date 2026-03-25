@@ -42,21 +42,21 @@ const Training = () => (
             transition={{ duration: 0.5, type: "spring" }}
             className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg"
           >
-            <GraduationCap size={22} className="text-white" />
+            <GraduationCap size={22} className="text-primary-foreground" />
           </motion.div>
 
           <div>
-            <h3 className="text-lg font-semibold text-white leading-snug">
+            <h3 className="text-lg font-semibold text-foreground leading-snug">
               {trainingDetails.title}
             </h3>
-            <p className="text-sm text-gray-400 mt-1">
+            <p className="text-sm text-muted-foreground mt-1">
               {trainingDetails.institution} · {trainingDetails.date}
             </p>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-white/10 mb-6"></div>
+        <div className="h-px bg-border mb-6"></div>
 
         {/* Highlights */}
         <ul className="space-y-4">
@@ -76,7 +76,7 @@ const Training = () => (
                 />
               </div>
 
-              <p className="text-sm text-gray-300 leading-relaxed group-hover:text-white transition">
+              <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition">
                 {point}
               </p>
             </motion.li>

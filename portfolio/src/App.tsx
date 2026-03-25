@@ -13,7 +13,7 @@ import ScrollProgress from "./components/ScrollProgress";
 
 const App = () => {
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div className="bg-background text-foreground overflow-x-hidden">
       <ScrollProgress />
       <Navbar />
 

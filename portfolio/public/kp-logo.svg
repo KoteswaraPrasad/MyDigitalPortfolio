@@ -1,0 +1,25 @@
+<svg viewBox="0 0 1152 720" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black Background -->
+  <rect width="1152" height="720" fill="#000000"/>
+  
+  <!-- K -->
+  <g fill="none" stroke="white" stroke-width="80" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Vertical line of K -->
+    <line x1="380" y1="140" x2="380" y2="580"/>
+    <!-- Top diagonal of K -->
+    <line x1="380" y1="280" x2="610" y2="140"/>
+    <!-- Bottom diagonal of K -->
+    <line x1="380" y1="360" x2="610" y2="540"/>
+  </g>
+  
+  <!-- Slash separator -->
+  <line x1="690" y1="120" x2="730" y2="600" stroke="white" stroke-width="60" stroke-linecap="round"/>
+  
+  <!-- P -->
+  <g fill="none" stroke="white" stroke-width="80" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Vertical line of P -->
+    <line x1="780" y1="140" x2="780" y2="580"/>
+    <!-- Curved top part of P -->
+    <path d="M 780 140 Q 780 140 880 140 Q 950 140 950 240 Q 950 320 880 320 Q 780 320 780 320"/>
+  </g>
+</svg>

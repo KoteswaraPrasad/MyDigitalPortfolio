@@ -38,7 +38,7 @@ const Certifications = () => {
   const isInView = useInView(containerRef, { once: false, amount: 0.2 });
 
   return (
-    <section id="certifications" className="py-20 md:py-28 px-4 relative overflow-hidden">
+    <section id="certifications" className="bg-background py-16 md:py-24 px-4 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />

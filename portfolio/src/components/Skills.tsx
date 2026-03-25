@@ -291,7 +291,7 @@ const Skills = () => {
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
 
   return (
-    <section id="skills" className="py-20 md:py-28 px-4 relative overflow-hidden">
+    <section id="skills" className="bg-background py-16 md:py-24 px-4 relative overflow-hidden">
       {/* Static background gradients - no animation for performance */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />

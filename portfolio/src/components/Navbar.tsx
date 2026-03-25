@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useMotionValueEvent, useScroll } from "framer-
 import { Sun, Moon, Sparkles, Menu, X, Home, User, Code, Briefcase, Award, GraduationCap, BookOpen, Mail } from "lucide-react";
 
 const navItems = [
+  { name: "About", icon: User },
   { name: "Skills", icon: Code },
   { name: "Projects", icon: Briefcase },
   { name: "Certifications", icon: Award },
@@ -43,6 +44,10 @@ const Navbar = () => {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      // Deselect after navigation animation completes
+      setTimeout(() => setActive(""), 900);
+    } else {
+      setActive("");
     }
   };
 

@@ -10,6 +10,7 @@ import Training from "./components/Training";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
+import About from "./components/About";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         transition={{ duration: 1 }}
       >
         <Hero />
+        <About />
         <Skills />
         <Projects />
         <Certifications />

@@ -24,7 +24,7 @@ const education = [
 ];
 
 const Education = () => (
-  <section id="education" className="py-20 md:py-28 px-4">
+  <section id="education" className="bg-background py-16 md:py-24 px-4">
     <div className="container mx-auto max-w-2xl">
       <SectionHeading title="Education" />
       <div className="relative mt-12">

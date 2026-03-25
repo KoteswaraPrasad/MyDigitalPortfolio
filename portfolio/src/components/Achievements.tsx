@@ -9,7 +9,7 @@ const achievements = [
 ];
 
 const Achievements = () => (
-  <section id="achievements" className="py-20 md:py-28 px-4">
+  <section id="achievements" className="bg-surface py-16 md:py-24 px-4">
     <div className="container mx-auto max-w-2xl">
       <SectionHeading title="Achievements" />
       <div className="space-y-4 mt-12">

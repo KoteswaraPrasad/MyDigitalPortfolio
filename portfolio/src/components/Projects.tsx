@@ -203,7 +203,7 @@ const Projects = () => {
   const otherProjects = projects.filter(p => !p.featured);
 
   return (
-    <section id="projects" className="py-20 md:py-28 px-4 relative overflow-hidden">
+    <section id="projects" className="bg-surface py-16 md:py-24 px-4 relative overflow-hidden">
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div

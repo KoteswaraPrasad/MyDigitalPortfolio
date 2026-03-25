@@ -25,7 +25,7 @@ const Training = () => {
   const [activeHighlight, setActiveHighlight] = useState<number | null>(null);
 
   return (
-    <section id="training" className="py-20 md:py-28 px-4 relative overflow-hidden">
+    <section id="training" className="bg-surface py-16 md:py-24 px-4 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div

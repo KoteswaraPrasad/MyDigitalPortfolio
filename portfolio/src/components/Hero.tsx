@@ -103,7 +103,7 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       <ParticleBackground />
 
       <motion.div
@@ -147,9 +147,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-sm md:text-base text-muted-foreground/80 max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed text-pretty"
             >
-              Passionate Computer Science student at Lovely Professional University with hands-on experience building
-              full-stack web applications and cross-platform mobile apps. Skilled in the MERN stack, Flutter, and DevOps
-              tools like Docker & Kubernetes. I love turning ideas into polished, user-friendly digital products.
+              Computer Science student creating modern, responsive web apps with a focus on React and Node.js.
             </motion.p>
 
             <motion.div
@@ -225,26 +223,18 @@ const Hero = () => {
             whileInView={{ x: 0, opacity: 1, scale: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150, damping: 18 }}
-            className="flex justify-center lg:justify-end perspective"
-            style={{ perspective: "1200px" }}
+            className="flex justify-center lg:justify-end"
           >
             <motion.div
-              whileHover={{ scale: 1.06, rotateY: 5 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 220, damping: 18 }}
-              className="w-64 h-80 md:w-72 md:h-96 rounded-full p-[5px] bg-gradient-to-br from-primary via-accent to-secondary shadow-[0_30px_60px_-20px_rgba(59,130,246,0.45)]"
-              style={{
-                transformStyle: "preserve-3d",
-                transform: "rotateY(-15deg) rotateX(5deg)"
-              }}
+              className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl"
+              style={{ boxShadow: "0 20px 40px -10px rgba(59, 130, 246, 0.3)" }}
             >
               <img
                 src={profileImg}
                 alt="Koteswara Prasad"
-                className="w-full h-full rounded-full object-cover border-4 border-green-600/65 shadow-inner"
-                style={{ 
-                  filter: "grayscale(15%) contrast(1.05)",
-                  transformStyle: "preserve-3d"
-                }}
+                className="w-full h-full object-cover"
               />
             </motion.div>
           </motion.div>

@@ -8,63 +8,77 @@ const trainingDetails = {
   date: "July 2025",
   highlights: [
     "Completed a hands-on certification program focused on cross-platform Android app development using Flutter, achieving 90%+.",
-    "Gained hands-on experience in Dart, widget-based UI design, and Flutter's architecture for responsive mobile apps.",
-    "Designed responsive mobile interfaces using Flutter widgets, layout structures, and custom UI components.",
-    "Built and deployed multiple Android modules, including CRUD applications and dashboard-based apps, improving development efficiency by 25%.",
+    "Gained hands-on experience in Dart, widget-based UI design, and Flutter architecture for responsive apps.",
+    "Designed modern mobile interfaces using advanced Flutter UI components and layouts.",
+    "Built and deployed multiple Android modules including CRUD systems and dashboards, improving efficiency by 25%.",
   ],
 };
 
 const Training = () => (
-  <section id="training" className="py-20 md:py-28 px-4">
-    <div className="container mx-auto max-w-2xl">
+  <section id="training" className="py-24 px-4 relative">
+    
+    {/* Background Glow */}
+    <div className="absolute inset-0 flex justify-center">
+      <div className="w-[400px] h-[400px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+    </div>
+
+    <div className="container mx-auto max-w-3xl relative z-10">
       <SectionHeading title="Training" />
+
       <motion.div
-        initial={{ opacity: 0, y: 40, scale: 0.95 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 15 }}
-        whileHover={{ boxShadow: "0 20px 60px -15px hsl(239 84% 67% / 0.12)", transition: { duration: 0.3 } }}
-        className="mt-12 rounded-xl border border-border bg-card p-6 md:p-8 transition-colors hover:border-primary/30"
+        transition={{ duration: 0.7 }}
+        whileHover={{ scale: 1.02 }}
+        className="mt-14 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-xl transition-all"
       >
-        <div className="flex items-start gap-4 mb-6">
+        {/* Header */}
+        <div className="flex items-start gap-5 mb-8">
+
           <motion.div
-            initial={{ scale: 0, rotate: -180 }}
+            initial={{ scale: 0, rotate: -90 }}
             whileInView={{ scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 200 }}
-            className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"
+            transition={{ duration: 0.5, type: "spring" }}
+            className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-lg"
           >
-            <GraduationCap size={20} className="text-primary" />
+            <GraduationCap size={22} className="text-white" />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: -15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-          >
-            <h3 className="text-base font-semibold text-foreground">{trainingDetails.title}</h3>
-            <p className="text-sm text-muted-foreground">{trainingDetails.institution} · {trainingDetails.date}</p>
-          </motion.div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-white leading-snug">
+              {trainingDetails.title}
+            </h3>
+            <p className="text-sm text-gray-400 mt-1">
+              {trainingDetails.institution} · {trainingDetails.date}
+            </p>
+          </div>
         </div>
-        <ul className="space-y-3">
+
+        {/* Divider */}
+        <div className="h-px bg-white/10 mb-6"></div>
+
+        {/* Highlights */}
+        <ul className="space-y-4">
           {trainingDetails.highlights.map((point, i) => (
             <motion.li
               key={i}
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.3 + i * 0.12 }}
-              className="flex items-start gap-3"
+              className="flex items-start gap-4 group"
             >
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.4 + i * 0.12, type: "spring", stiffness: 300 }}
-              >
-                <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
-              </motion.div>
-              <span className="text-sm text-muted-foreground leading-relaxed">{point}</span>
+              <div className="mt-1">
+                <CheckCircle2
+                  size={18}
+                  className="text-blue-500 group-hover:scale-110 transition"
+                />
+              </div>
+
+              <p className="text-sm text-gray-300 leading-relaxed group-hover:text-white transition">
+                {point}
+              </p>
             </motion.li>
           ))}
         </ul>

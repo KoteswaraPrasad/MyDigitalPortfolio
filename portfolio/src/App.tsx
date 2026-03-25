@@ -1,87 +1,40 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import { motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Education from "./components/Education";
+import Certifications from "./components/Certifications";
+import Achievements from "./components/Achievements";
+import Training from "./components/Training";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
 
-const queryClient = new QueryClient();
-
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-    scale: 0.98,
-  },
-  in: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    y: -20,
-    scale: 1.02,
-  },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.4,
-};
-
-const AnimatedRoutes = () => {
-  const location = useLocation();
-
+const App = () => {
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <Index />
-            </motion.div>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-            >
-              <NotFound />
-            </motion.div>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
+    <div className="bg-black text-white overflow-x-hidden">
+      <ScrollProgress />
+      <Navbar />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Hero />
+        <Skills />
+        <Projects />
+        <Certifications />
+        {/* <Achievements /> */}
+        <Training />
+        <Education />
+        <Contact />
+      </motion.div>
+
+      <Footer />
+    </div>
   );
 };
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <AnimatedRoutes />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
 
 export default App;

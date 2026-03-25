@@ -225,18 +225,26 @@ const Hero = () => {
             whileInView={{ x: 0, opacity: 1, scale: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.7, delay: 0.2, type: "spring", stiffness: 150, damping: 18 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end perspective"
+            style={{ perspective: "1200px" }}
           >
             <motion.div
-              whileHover={{ scale: 1.06, rotate: 1 }}
+              whileHover={{ scale: 1.06, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 220, damping: 18 }}
-              className="w-44 h-44 md:w-56 md:h-56 rounded-full p-[5px] bg-gradient-to-br from-primary via-accent to-secondary shadow-[0_30px_60px_-20px_rgba(59,130,246,0.45)]"
+              className="w-64 h-80 md:w-72 md:h-96 rounded-full p-[5px] bg-gradient-to-br from-primary via-accent to-secondary shadow-[0_30px_60px_-20px_rgba(59,130,246,0.45)]"
+              style={{
+                transformStyle: "preserve-3d",
+                transform: "rotateY(-15deg) rotateX(5deg)"
+              }}
             >
               <img
                 src={profileImg}
                 alt="Koteswara Prasad"
                 className="w-full h-full rounded-full object-cover border-4 border-green-600/65 shadow-inner"
-                style={{ filter: "grayscale(15%) contrast(1.05)" }}
+                style={{ 
+                  filter: "grayscale(15%) contrast(1.05)",
+                  transformStyle: "preserve-3d"
+                }}
               />
             </motion.div>
           </motion.div>

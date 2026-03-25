@@ -28,7 +28,7 @@ const projects = [
     tech: ["Flutter", "Dart", "Android"],
     description:
       "Completed hands-on training building cross-platform Android apps using Flutter — including CRUD applications and dashboard-based apps, achieving 90%+ in the certification program.",
-    github: "https://github.com/KoteswaraPrasad",
+    github: "https://github.com/KoteswaraPrasad/Weather-Application",
     date: "July 2025",
     accent: "from-primary/15 to-primary/5",
     icon: "📱",

@@ -30,7 +30,7 @@ const projects = [
     category: "Web App",
   },
   {
-    title: "Mobile App Development (Flutter)",
+    title: "Weather Application (Flutter)",
     tech: ["Flutter", "Dart", "Android"],
     description:
       "Completed hands-on training building cross-platform Android apps using Flutter — including CRUD applications and dashboard-based apps.",
